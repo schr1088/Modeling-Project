@@ -1,3 +1,3 @@
 # Modeling-Project
 Diffusion Stokes-Einstein
-Project for Esci 5980 modeling classic diffusion and a comparison with the stokes-einstein coefficient
+Project for Esci 5980 modeling classic diffusion and a comparison with the stokes-einstein equation D=kb*T/(6*pi*eta*r) where kb is Boltzmann's contant, T is absolute temperature, eta is the dynamic viscosity, r is the radius of the sphere and D the constant. The equation models the diffusion of spherical particles through a fluid with a low reynolds number.  It is important because diffusion is not always as straightforward as it seems.  The last chart shows the different diffusion rates when incorporating the constant and whithout.  A large difference is observed when constant D is implemented into the equation.  The reason I decided to choose this is particular aspect is because of descriptions of the Exxon-Valdez spill where oil clumped together in particulates of a roughly spherical shape after high wind speeds.
