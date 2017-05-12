@@ -33,7 +33,6 @@ D_06 = 0.01
 D_03 = 0.02
 D_02 = 0.03
 D_01 = 0.06
-
 #Df=np.ones((D,R),dtype=object)
 
 m = np.ones(nx) #array
@@ -44,7 +43,7 @@ um = np.ones(nx)
 for n in range(nt):
     um = m.copy()
     for i in range(1, nx -1):
-        m[i] = um[i] + nu *dt/dx**2 *(um[i+1] - 2*um[i]+um[i-1])
+        m[i] = um[i] + nu * dt/dx**2 * (um[i+1] - 2*um[i]+um[i-1])
 
 
 m_06= np.ones(nx)
@@ -108,9 +107,15 @@ plt.xlabel('Time')
 plt.plot(linspace(0,2,nx),m, 'r')
 
 fig4 = plt.figure(4)
-plt.title('1-D Diffusion with Stokes-Einsteins Coefficient')
+plt.title('1-D Diffusion with Stokes-Einstein Coefficient')
 plt.ylabel('Concentration')
 plt.xlabel('Time')
-plt.plot(linspace(0,2,nx),m, 'r',m_06, 'b',m_03,'k',m_02, 'm',m_01,'g');
+plt.plot(linspace(0,2,nx),m, 'r', label='no coefficient')
+plt.plot(linspace(0,2,nx),m_06, 'b', label='m_06')
+plt.plot(linspace(0,2,nx),m_03,'k', label ='m_03')
+plt.plot(linspace(0,2,nx),m_02, 'm', label='m_02')
+plt.plot(linspace(0,2,nx),m_01,'g', label='m_01')
+
+plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 
 plt.show()
